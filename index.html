@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuário</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script type="text/javascript" src="./index.js" defer=""></script>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="profile-header">
+        <img src="https://i.pravatar.cc/150?img=23" alt="Foto de perfil" class="avatar">
+        <button class="settings-button">
+          <i data-lucide="settings"></i>
+        </button>
+      </div>
+      <h2 class="user-name">Arya Muller</h2>
+
+      <div class="tabs">
+        <button class="tab-button active" data-tab="estatisticas">ESTATÍSTICAS</button>
+        <button class="tab-button" data-tab="conquistas">CONQUISTAS</button>
+        <button class="tab-button" data-tab="atividade">ATIVIDADE</button>
+      </div>
+
+      <div class="tab-content active" id="estatisticas">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <i data-lucide="zap" class="stat-icon"></i>
+            <div>
+              <div class="stat-value">55</div>
+              <div class="stat-label">Questionários</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <i data-lucide="users" class="stat-icon"></i>
+            <div>
+              <div class="stat-value">#2</div>
+              <div class="stat-label">Classificação</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="progress-section">
+          <div class="progress-item">
+            <div class="progress-header">
+              <span>Precisão</span>
+              <span class="progress-value">83%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 83%;"></div>
+            </div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-header">
+              <span>Retenção</span>
+              <span class="progress-value">86%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 86%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topics-section">
+          <h3>TÓPICOS MAIS FORTES</h3>
+          <div class="topic-item">
+            <div class="topic-header">
+              <span>Segurança Alimentar</span>
+              <span class="topic-value">28%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill red" style="width: 28%;"></div>
+            </div>
+          </div>
+          <div class="topic-item">
+            <div class="topic-header">
+              <span>Protocolos de Conformidade</span>
+              <span class="topic-value">35%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill orange" style="width: 35%;"></div>
+            </div>
+          </div>
+          <div class="topic-item">
+            <div class="topic-header">
+              <span>Políticas de Redes Sociais</span>
+              <span class="topic-value">40%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill yellow" style="width: 40%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="conquistas">
+        <div class="level-progress">
+          <div class="level-header">
+            <span class="level-title">Nível 2</span>
+            <span class="level-subtitle">500 Pontos para o próximo nível</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 60%;"></div>
+          </div>
+        </div>
+
+        <h3>MEDALHAS</h3>
+        <div class="medals-grid">
+          <div class="medal">
+            <div class="medal-circle gold">
+              <span>24</span>
+            </div>
+            <span class="medal-label">Ouro</span>
+          </div>
+          <div class="medal">
+            <div class="medal-circle silver">
+              <span>18</span>
+            </div>
+            <span class="medal-label">Prata</span>
+          </div>
+          <div class="medal">
+            <div class="medal-circle bronze">
+              <span>11</span>
+            </div>
+            <span class="medal-label">Bronze</span>
+          </div>
+        </div>
+
+        <h3>CERTIFICAÇÕES</h3>
+        <div class="certifications-grid">
+          <div class="certification-item">
+            <div class="certification-icon">
+              <i data-lucide="shield-check"></i>
+            </div>
+            <div class="certification-content">
+              <div class="certification-title">Protocolos de Segurança Alimentar</div>
+              <div class="certification-level">Bronze Certificado</div>
+            </div>
+          </div>
+          <div class="certification-item">
+            <div class="certification-icon">
+              <i data-lucide="hard-hat"></i>
+            </div>
+            <div class="certification-content">
+              <div class="certification-title">Instalações e Manutenção</div>
+              <div class="certification-level">Prata Certificado</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="atividade">
+        <div class="activity-item">
+          <div class="activity-icon gold">
+            <i data-lucide="award"></i>
+          </div>
+          <div class="activity-content">
+            <p class="activity-title">Certificação Ouro em Gestão de Mudanças</p>
+            <p class="activity-date">1 Mai, 2023 • 5/5 Correto</p>
+          </div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-icon silver">
+            <i data-lucide="book"></i>
+          </div>
+          <div class="activity-content">
+            <p class="activity-title">Completou Drive-Thru</p>
+            <p class="activity-date">1 Mai, 2023 • 5/10 Correto</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="bottom-nav">
+      <button class="nav-button"><i data-lucide="home"></i></button>
+      <button class="nav-button"><i data-lucide="book"></i></button>
+      <button class="nav-button"><i data-lucide="zap"></i></button>
+      <button class="nav-button"><i data-lucide="bell"></i></button>
+      <button class="nav-button active"><i data-lucide="user"></i></button>
+    </nav>
+
+    <script src="script.js"></script>
+
+
+
+  </body>
+
+</html>

@@ -1,0 +1,450 @@
+:root {
+    --background: #E8E7F0;
+    --card-background: #FFFFFF;
+    --primary: #4361EE;
+    --text-primary: #1A1D1F;
+    --text-secondary: #6C7275;
+    --yellow: #FFB020;
+    --green: #4CAF50;
+    --red: #FF6B6B;
+    --orange: #FF9F43;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: var(--background);
+    color: var(--text-primary);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 430px;
+    margin: 0 auto;
+    padding: 16px;
+    padding-bottom: 80px;
+}
+
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.settings-button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-name {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: var(--text-primary);
+}
+
+.tabs {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.tab-button {
+    padding: 8px 0;
+    background: none;
+    border: none;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    cursor: pointer;
+    position: relative;
+    letter-spacing: 0.5px;
+}
+
+.tab-button.active {
+    color: var(--primary);
+}
+
+.tab-button.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--primary);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.stat-card {
+    background-color: var(--card-background);
+    padding: 16px;
+    border-radius: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.stat-icon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 8px;
+}
+
+.stat-icon[data-lucide="zap"] {
+    color: var(--yellow);
+}
+
+.stat-icon[data-lucide="users"] {
+    color: var(--primary);
+}
+
+.stat-value {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.stat-label {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+.progress-section {
+    margin-bottom: 32px;
+}
+
+.progress-item {
+    margin-bottom: 16px;
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.progress-header span {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+.progress-value {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.progress-bar {
+    height: 6px;
+    background-color: rgba(0, 0, 0, 0.04);
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-fill {
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.3s ease;
+}
+
+.progress-fill.red {
+    background-color: var(--red);
+}
+
+.progress-fill.orange {
+    background-color: var(--orange);
+}
+
+.progress-fill.yellow {
+    background-color: var(--yellow);
+}
+
+.topics-section h3 {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.topic-item {
+    background: var(--card-background);
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.topic-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+.topic-header span:first-child {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.topic-value {
+    color: var(--text-secondary);
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    background-color: var(--card-background);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 16px;
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.08);
+}
+
+.nav-button {
+    width: 48px;
+    height: 48px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-button.active {
+    color: var(--primary);
+}
+
+.nav-button i {
+    width: 24px;
+    height: 24px;
+}
+
+/* Achievements Tab Styles */
+.level-progress {
+    background: var(--card-background);
+    padding: 16px;
+    border-radius: 16px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.medals-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.medal-circle {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 8px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.medal-circle.gold {
+    background-color: rgba(255, 176, 32, 0.1);
+    color: var(--yellow);
+}
+
+.medal-circle.silver {
+    background-color: rgba(108, 114, 117, 0.1);
+    color: var(--text-secondary);
+}
+
+.medal-circle.bronze {
+    background-color: rgba(255, 159, 67, 0.1);
+    color: var(--orange);
+}
+
+.medal-label {
+    font-size: 13px;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+/* Activity Tab Styles */
+.activity-item {
+    background: var(--card-background);
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.activity-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.activity-icon.gold {
+    background-color: rgba(255, 176, 32, 0.1);
+    color: var(--yellow);
+}
+
+.activity-icon.silver {
+    background-color: rgba(108, 114, 117, 0.1);
+    color: var(--text-secondary);
+}
+
+.activity-title {
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.activity-date {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 430px) {
+    .container {
+        padding: 16px 12px;
+    }
+    
+    .stats-grid {
+        gap: 8px;
+    }
+    
+    .stat-card {
+        padding: 12px;
+    }
+}
+
+/* Achievements Tab Styles */
+.certifications-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.certification-item {
+    background: var(--card-background);
+    padding: 12px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.certification-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(67, 97, 238, 0.1);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.certification-content {
+    flex-grow: 1;
+}
+
+.certification-title {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.certification-level {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+/* Adjust existing styles */
+.level-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.level-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.level-subtitle {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+.medals-grid {
+    margin-bottom: 24px;
+}
+
+/* Add a separator between sections */
+.section-separator {
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.08);
+    margin: 24px 0;
+}
+
+/* Adjust tab content spacing */
+.tab-content {
+    padding-top: 16px;
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+
+
